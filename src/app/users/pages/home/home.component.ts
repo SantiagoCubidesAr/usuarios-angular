@@ -14,9 +14,9 @@ export class HomePageComponent implements OnInit {
       this.users = response;
     });
   }
-  searchUsers(textoBusqueda: string): void {
+  searchUsers(text: string): void {
     this.usersService.getUsers().subscribe((response: User[]) => {
-      this.users = response.filter(user => user.name.includes(textoBusqueda) || user.username.includes(textoBusqueda));
+      this.users = response.filter(user => user.name.includes(text) || user.email.includes(text) || user.address.city.includes(text));
     });
   }
 }

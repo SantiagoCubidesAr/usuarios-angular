@@ -2,10 +2,12 @@
   <div class="col-md-4" *ngFor="let user of users">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">{{ user.name }}</h5>
-        <p class="card-text">{{ user.email }}</p>
-        <p class="card-text">{{ user.address.city }}</p>
+        <h6 class="card-title">ID: {{ user.id }}</h6>
+        <p class="card-text">Nombre: {{ user.name }}</p>
+        <p class="card-text">Correo: {{ user.email }}</p>
+        <p class="card-text">Ciudad: {{ user.address.city }}</p>
       </div>
     </div>
   </div>
 </div>
+
